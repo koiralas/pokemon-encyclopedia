@@ -16,5 +16,8 @@ for type_data in pokemon_data['types']:
 
 print(f"Type(s): {' and '.join(pokemon_types)}")
 
-pokemon_abilities = pokemon_data['abilities']
+pokemon_abilities = []
+for ability_data in pokemon_data['abilities']:
+    pokemon_abilities.append(ability_data['ability']['name'])
 
+print(f"Abilities: {', '.join(pokemon_abilities)}")
